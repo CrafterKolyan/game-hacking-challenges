@@ -13,6 +13,7 @@ You start with `production rate` of `1 c/s` and `capacity` of `10 c`.
 
 2. You can buy upgrades for your company:
 - Factory upgrades (each can be bought multiple times):
+
 | Upgrade name |   Cost  | Production rate |
 |:------------:|:-------:|:---------------:|
 | Worker       |  `10 c` |  `1 c/s`        |
@@ -24,6 +25,7 @@ You start with `production rate` of `1 c/s` and `capacity` of `10 c`.
 If the price becomes not integer after this transformation then it is rounded down.
 
 - Storage upgrades (each can be bought only once):
+
 | Upgrade name |   Cost  | Capacity |
 |:------------:|:-------:|:--------:|
 | Upgrade 1    |  `10 c` |  `25 c`  |
