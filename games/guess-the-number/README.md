@@ -1,6 +1,6 @@
 # Guess the number
 
-This game is not yet done. Current status: **OK**
+Current status: **OK**
 
 ## Description (How to play)
 1. Type maximum possible number `max_number` to be guessed. `max_number` must be integer and be not less than `1`.
