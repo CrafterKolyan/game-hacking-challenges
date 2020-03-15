@@ -4,9 +4,11 @@
 #include <thread>
 #include <functional>
 
+#include <conio.h>
 #include <windows.h>
 
 constexpr std::chrono::milliseconds default_delay = std::chrono::milliseconds(10);
+constexpr int SYMBOLS_IN_LINE = 80;
 std::mutex output_mutex;
 
 typedef std::pair<std::pair<std::string, std::string>, std::pair<int, int>> factory_upgrade;
@@ -43,6 +45,18 @@ private:
   std::chrono::milliseconds _delay;
   bool _repeat;
 };
+
+int getch_noblock() {
+    if (_kbhit())
+        return _getch();
+    else
+        return -1;
+}
+
+void clear_current_line() {
+  std::cout << std::string(SYMBOLS_IN_LINE, ' ') << "\r";
+  std::cout.flush();
+}
 
 void add_cookies(int &total_cookies, int &remainder, int production_rate, int capacity, std::chrono::milliseconds delay) {
   constexpr int MILLISECONDS_IN_SECONDS = std::chrono::seconds(1) / std::chrono::milliseconds(1);
@@ -144,13 +158,12 @@ int main() {
   HANDLE consoleWindow = GetStdHandle(STD_OUTPUT_HANDLE);
   CONSOLE_SCREEN_BUFFER_INFO screenInfo;
   GetConsoleScreenBufferInfo(consoleWindow, &screenInfo);
+  SetConsoleMode(consoleWindow, ENABLE_INSERT_MODE | ENABLE_EXTENDED_FLAGS);
 
   Timer timer_print = Timer([&]() {
     std::lock_guard<std::mutex> lock(output_mutex);
     SetConsoleCursorPosition(consoleWindow, screenInfo.dwCursorPosition);
-    for (int i = 0; i < 10; ++i) {
-      std::cout << std::string(100, ' ') << std::endl;
-    }
+    clear_current_line();
     SetConsoleCursorPosition(consoleWindow, screenInfo.dwCursorPosition);
     std::cout << "Total cookies: " << total_cookies << " Capacity: " << capacity << " Production rate: " << production_rate << std::endl << std::endl;
 
@@ -168,11 +181,12 @@ int main() {
 
   std::string input;
   while (total_cookies != storage_upgrades.back().second) {
-    std::getline(std::cin, input);
+    input = getch_noblock();
     std::lock_guard<std::mutex> lock(output_mutex);
-    std::cout << std::string(100, ' ') << "\r";
-    std::cout << "Last command: " << input << std::endl;
 
+    if (input[0] != -1) {
+      clear_current_line();
+    }
     auto command = commands.find(input);
     if (command != commands.end()) {
       command->second();
@@ -180,5 +194,8 @@ int main() {
   }
   auto end_time = std::chrono::steady_clock::now().time_since_epoch();
   double score = 60000 * std::chrono::seconds(1) / (end_time - start_time);
+  std::lock_guard<std::mutex> lock(output_mutex);
+  clear_current_line();
+  std::cout << std::endl;
   std::cout << "Score: " << score << " Time: " << (end_time - start_time) / std::chrono::seconds(1) << " s" << std::endl;
 }
