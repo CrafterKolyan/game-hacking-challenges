@@ -6,7 +6,7 @@
 #include <tlhelp32.h>
 
 constexpr char applicationName[] = "guess-the-number.exe";
-constexpr DWORD_PTR valueAddress = 0x0061F2B8; // Found using Cheat Engine 6.8.3
+constexpr DWORD_PTR valueAddress = 0x0061F2A8; // Found using Cheat Engine 6.8.3
  
 int main() {
   HANDLE snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);

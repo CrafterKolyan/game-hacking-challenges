@@ -9,7 +9,7 @@ Current status: **OK**
 ### How to pass the challenge ([Read memory of another process](../../challenges/read-process-memory.md)).
 1. Start `guess-the-number` game and type in maximum number `9000000000000000000`.
 2. Start `hack-guess-the-number` in console. Copy the number it printed.
-3. Paste the number in `guess-the-number` game. Obtain score of `9.8`.
+3. Paste the number in `guess-the-number` game. Obtain score of `9.84`.
 
 #### Screenshot
 ![Screenshot](screenshot.png)

@@ -58,7 +58,8 @@ double game(long long maximum_number) {
 
   double divisor = log2(std::max(maximum_number, 2LL));
   double score = (1 - guesses / divisor) * 10;
-
+  // Round to two digits
+  score = round(score * 100) / 100;
   return score;
 }
 
@@ -70,6 +71,5 @@ int main() {
     maximum_number = request_ll(maximumNumberRead);
   }
   double score = game(maximum_number);
-  std::cout.precision(2);
   std::cout << scoreString << score << std::endl;
 }
