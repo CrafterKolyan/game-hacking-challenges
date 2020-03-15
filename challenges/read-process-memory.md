@@ -6,10 +6,10 @@ Obtain score of more than `9.5` in [Guess the number](../games/guess-the-number)
 ## Solution
 
 ### Windows
-See [`hack-guess-the-number`](../hacks/read-memory)
+See [`hack-guess-the-number`](../hacks/read-memory).
 
 ### Unix
-not presented
+Not presented.
 
 ### MacOS X
-not presented
+Not presented.

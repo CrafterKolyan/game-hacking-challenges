@@ -4,7 +4,7 @@ Current status: **OK**
 
 ## Description (How to play)
 1. Type maximum possible number `max_number` to be guessed. `max_number` must be integer and be not less than `1`.
-Program will generate random number in range `[0; max_number]`
+Program will generate random number in range `[0; max_number]`.
 2. Type your guesses of number.  
 You will get `< (generated number is less)` if generated number is less than the one you typed in.  
 You will get `> (generated number is greater)` if generated number is greater than the one you typed in.  
