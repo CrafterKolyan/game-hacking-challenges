@@ -8,7 +8,7 @@ Obtain score of more than `1000` in [Cookie Clicker 1M](../games/cookie-clicker-
 ## Solution
 
 ### Windows
-Not presented.
+See [`hack-cookie-clicker-1m`](../hacks/write-memory).
 
 ### Unix
 Not presented.
