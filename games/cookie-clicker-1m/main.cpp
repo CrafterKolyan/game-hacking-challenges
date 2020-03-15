@@ -173,7 +173,7 @@ int main() {
       std::cout << "Storage: " << "Cost: " << storage_upgrade.first << " c" << " New capacity: " << storage_upgrade.second << " c" << " (command: 'c')" << std::endl;
     }
     for (const auto &u : factory_upgrades) {
-      std::cout << u.first.first << ": Cost: " << u.second.first << " c Production rate: " << u.second.second << " c (command: '" << u.first.second << "')" << std::endl;
+      std::cout << u.first.first << ": Cost: " << u.second.first << " c Production rate: " << u.second.second << " c/s (command: '" << u.first.second << "')" << std::endl;
     }
     std::cout.flush();
   }, default_delay, true);
