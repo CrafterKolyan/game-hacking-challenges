@@ -11,6 +11,9 @@ Current status: **OK**
 2. Start `hack-guess-the-number` in console. Copy the number it printed.
 3. Paste the number in `guess-the-number` game. Obtain score of `9.8`.
 
+#### Screenshot
+![Screenshot](screenshot.png)
+
 ## Compilation
 ```
 make
