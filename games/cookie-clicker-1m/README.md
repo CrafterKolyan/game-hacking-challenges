@@ -53,9 +53,7 @@ If the price becomes not integer after this transformation then it is rounded do
 
 **Note:** you can buy storage upgrades only in consecutive order. E.g.: you cannot buy "Upgrade 5" without buying "Upgrade 4" or "Upgrade 3". This is done not only by upgrades prices policy but also by the whole game concept design (this means that even if prices were another this should be principle must remain).
 
-3. As soon as you obtain `1000000 c` you will get score of `60000 / <time of playing in seconds>`. 
-
-**Note:** `<time of playing in seconds>` is equal to `<time of playing in millseconds> / 1000` where `<time of playing in milliseconds>` is rounded down. E.g.: If you won the game in `3219.561 milliseconds` then `<time of playing in seconds> = 3.219`.
+3. As soon as you obtain `1000000 c` you will get score of `60000 / <time of playing in seconds>`.
 
 ## Compilation
 ```
