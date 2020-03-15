@@ -1,9 +1,9 @@
 .PHONY: all clean
 
-all: cookie-clicker-1M
+all: cookie-clicker-1m
 
-cookie-clicker-1M: main.cpp
+cookie-clicker-1m: main.cpp
 	g++ -std=c++17 -O3 $? -o $@
 
 clean:
-	rm -rf cookie-clicker-1M
+	rm -rf cookie-clicker-1m
