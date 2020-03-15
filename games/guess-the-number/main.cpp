@@ -70,5 +70,6 @@ int main() {
     maximum_number = request_ll(maximumNumberRead);
   }
   double score = game(maximum_number);
+  std::cout.precision(2);
   std::cout << scoreString << score << std::endl;
 }
