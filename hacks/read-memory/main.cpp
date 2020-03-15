@@ -26,7 +26,7 @@ int main() {
     return 1;
   }
 
-  unsigned long long value;
+  long long value;
   if (!ReadProcessMemory(game_process, (LPCVOID)valueAddress, &value, sizeof(value), nullptr)) {
     std::cout << "Can't read memory of process " << applicationName << std::endl;
     return 1;
