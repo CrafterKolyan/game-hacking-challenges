@@ -1,6 +1,6 @@
 # Cookie Clicker 1M
 
-Current status: **concept design**
+Current status: **implemented with a bunch of crutches for Windows**
 
 ## Description (How to play)
 **Goal:** obtain `1'000'000` cookies as fast as possible.
