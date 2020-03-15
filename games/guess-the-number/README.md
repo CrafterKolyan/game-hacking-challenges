@@ -11,7 +11,7 @@ You will get `> (generated number is greater)` if generated number is greater th
 If you guess the number you will be get score of `(1 - <number of guesses> / log[2](max(max_number, 2))) * 10` rounded by two digits after the decimal point.  
 (`log[2](max_number)` is logarithm of `max_number` to base `2`).
 
-Note: `log[2](max_number)` and not `log[2](max_number + 1)` in points calculation is done on purpose.
+Note: `log[2](max_number)` and not `log[2](max_number + 1)` in score calculation is done on purpose.
 
 ## Compilation
 ```
