@@ -21,7 +21,7 @@ You start with `production rate` of `1 c/s` and `capacity` of `10 c`.
 | Professional | `10000 c` |  `500 c/s`    |
 | Machine      | `200000 c` |  `10000 c/s` |
 
-**Note**: Price of each factory upgrades raises up by `10%` after each purchase of that upgrade.
+**Note**: Price of each factory upgrade raises up by `10%` after each purchase of that upgrade.
 If the price becomes not integer after this transformation then it is rounded down.
 
 - Storage upgrades (each can be bought only once):
